@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PillTime Pro — Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <button id="theme-switch" class="theme-btn">
+      <i class="fas fa-moon"></i>
+      <span>Dark Mode</span>
+    </button>
+  </div>
+
+  <!-- Medicine Alert Popup -->
+  <div id="medicine-alert" class="alert-popup">
+    <div class="alert-content">
+      <div class="alert-header">
+        <i class="fas fa-bell alert-icon"></i>
+        <h3>Time for Medication!</h3>
+        <button class="close-alert">&times;</button>
+      </div>
+      <div class="alert-body">
+        <p id="alert-medication-name">Medication Name</p>
+        <p id="alert-medication-time" class="muted"></p>
+        <div class="alert-actions">
+          <button id="confirm-taken" class="btn btn-success">
+            <i class="fas fa-check"></i> Taken
+          </button>
+          <button id="snooze-alert" class="btn btn-secondary">
+            <i class="fas fa-clock"></i> Snooze (5 min)
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-container">
+        <div class="logo">
+          <i class="fas fa-capsules"></i>
+          <h1>PillTime Pro</h1>
+        </div>
+        <p class="tagline">Intelligent Medication Management</p>
+      </div>
+      
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active">
+          <i class="fas fa-home"></i> Dashboard
+        </a>
+        <a href="add.html" class="nav-link">
+          <i class="fas fa-plus-circle"></i> Add Reminder
+        </a>
+        <a href="history.html" class="nav-link">
+          <i class="fas fa-history"></i> History
+        </a>
+        <a href="about.html" class="nav-link">
+          <i class="fas fa-info-circle"></i> About / SDG
+        </a>
+      </nav>
+      
+      <div class="user-widget">
+        <div class="user-info">
+          <span class="welcome">Welcome back!</span>
+          <span class="user-name">User</span>
+        </div>
+        <div class="notification-bell">
+          <i class="fas fa-bell"></i>
+          <span class="notification-count" id="notification-count">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Stats Overview -->
+    <section class="stats-overview">
+      <div class="stat-card">
+        <div class="stat-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <div class="stat-info">
+          <h3 id="active-reminders-count">0</h3>
+          <p>Active Reminders</p>
+        </div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="stat-info">
+          <h3 id="taken-today">0</h3>
+          <p>Taken Today</p>
+        </div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon">
+          <i class="fas fa-calendar-check"></i>
+        </div>
+        <div class="stat-info">
+          <h3 id="compliance-rate">100%</h3>
+          <p>Compliance Rate</p>
+        </div>
+      </div>
+      
+      <div class="stat-card">
+        <div class="stat-icon">
+          <i class="fas fa-heartbeat"></i>
+        </div>
+        <div class="stat-info">
+          <h3 id="streak-days">0</h3>
+          <p>Day Streak</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="intro-card">
+      <div class="intro-header">
+        <h2><i class="fas fa-pills"></i> Your Active Reminders</h2>
+        <p class="subtitle">All data is stored securely in your browser</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-header">
+        <h3><i class="fas fa-list-alt"></i> Current Schedule</h3>
+        <div class="section-actions">
+          <a href="add.html" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Add New
+          </a>
+        </div>
+      </div>
+      
+      <div class="reminders-container">
+        <table id="reminders-table" aria-live="polite">
+          <thead>
+            <tr>
+              <th><i class="fas fa-capsules"></i> Medication</th>
+              <th><i class="fas fa-clock"></i> Scheduled Time</th>
+              <th><i class="fas fa-hourglass-half"></i> Countdown</th>
+              <th><i class="fas fa-chart-line"></i> Status</th>
+              <th><i class="fas fa-cog"></i> Actions</th>
+            </tr>
+          </thead>
+          <tbody id="reminders-body">
+            <!-- populated by app.js -->
+          </tbody>
+        </table>
+
+        <div id="no-reminders" class="empty-state">
+          <i class="fas fa-calendar-plus empty-icon"></i>
+          <h4>No reminders yet</h4>
+          <p>Start managing your medication schedule effectively</p>
+          <a href="add.html" class="btn btn-primary">
+            <i class="fas fa-plus"></i> Create Your First Reminder
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="content-section">
+      <div class="section-header">
+        <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+      </div>
+      
+      <div class="quick-actions">
+        <button id="request-notif" class="action-btn">
+          <div class="action-icon">
+            <i class="fas fa-bell"></i>
+          </div>
+          <div class="action-text">
+            <h4>Enable Notifications</h4>
+            <p>Get browser alerts for medications</p>
+          </div>
+          <i class="fas fa-chevron-right action-arrow"></i>
+        </button>
+        
+        <button id="export-data" class="action-btn">
+          <div class="action-icon">
+            <i class="fas fa-file-export"></i>
+          </div>
+          <div class="action-text">
+            <h4>Export Data</h4>
+            <p>Download your medication records</p>
+          </div>
+          <i class="fas fa-chevron-right action-arrow"></i>
+        </button>
+        
+        <button id="clear-all" class="action-btn btn-danger">
+          <div class="action-icon">
+            <i class="fas fa-trash-alt"></i>
+          </div>
+          <div class="action-text">
+            <h4>Clear All Reminders</h4>
+            <p>Remove all scheduled medications</p>
+          </div>
+          <i class="fas fa-chevron-right action-arrow"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Upcoming Schedule -->
+    <section class="content-section">
+      <div class="section-header">
+        <h3><i class="fas fa-calendar-alt"></i> Today's Schedule</h3>
+        <div class="time-display">
+          <i class="fas fa-clock"></i>
+          <span id="current-time">Loading...</span>
+        </div>
+      </div>
+      
+      <div class="schedule-timeline" id="today-schedule">
+        <!-- Dynamic schedule will appear here -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <i class="fas fa-capsules"></i>
+          <h3>PillTime Pro</h3>
+        </div>
+        <p>Professional medication management for better health</p>
+        <div class="sdg-badge">
+          <i class="fas fa-heart"></i>
+          <span>Supporting SDG 3: Good Health & Well-Being</span>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="index.html">Dashboard</a>
+        <a href="add.html">Add Medication</a>
+        <a href="history.html">History Log</a>
+        <a href="about.html">About SDG</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Health Tips</h4>
+        <p>Stay consistent with your medication schedule for optimal results.</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <small>&copy; 2024 PillTime Pro. All data remains in your browser.</small>
+    </div>
+  </footer>
+
+  <audio id="reminder-audio" preload="auto">
+    <!-- Default audio source -->
+    <source src="https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="app.js"></script>
+</body>
+</html>

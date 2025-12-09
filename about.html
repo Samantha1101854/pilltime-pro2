@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About - PillTime Pro</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <button id="theme-switch" class="theme-btn">
+      <i class="fas fa-moon"></i>
+      <span>Dark Mode</span>
+    </button>
+  </div>
+
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo-container">
+        <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+          <i class="fas fa-capsules"></i>
+          <h1>PillTime Pro</h1>
+        </a>
+        <p class="tagline">Intelligent Medication Management System</p>
+      </div>
+      
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">
+          <i class="fas fa-home"></i> Dashboard
+        </a>
+        <a href="add.html" class="nav-link">
+          <i class="fas fa-plus-circle"></i> Add Reminder
+        </a>
+        <a href="history.html" class="nav-link">
+          <i class="fas fa-history"></i> History
+        </a>
+        <a href="about.html" class="nav-link active">
+          <i class="fas fa-info-circle"></i> About / SDG
+        </a>
+      </nav>
+      
+      <div class="user-widget">
+        <div class="user-info">
+          <span class="welcome">Welcome back!</span>
+          <span class="user-name">User</span>
+        </div>
+        <div class="notification-bell">
+          <i class="fas fa-bell"></i>
+          <span class="notification-count" id="notification-count">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="content-section">
+      <div class="section-header">
+        <h2><i class="fas fa-info-circle"></i> About PillTime Pro</h2>
+        <p class="subtitle">Supporting Sustainable Development Goal 3: Good Health & Well-Being</p>
+      </div>
+      
+      <div class="about-content">
+        <div class="about-section">
+          <h3><i class="fas fa-heartbeat"></i> Our Mission</h3>
+          <p>PillTime Pro is dedicated to improving medication adherence and promoting better health outcomes through intelligent reminder systems and comprehensive tracking tools.</p>
+          <p>We believe that proper medication management is essential for achieving Sustainable Development Goal 3: Ensuring healthy lives and promoting well-being for all at all ages.</p>
+        </div>
+        
+        <div class="about-section">
+          <h3><i class="fas fa-capsules"></i> Key Features</h3>
+          <div class="features-grid">
+            <div class="feature-card">
+              <i class="fas fa-bell"></i>
+              <h4>Smart Reminders</h4>
+              <p>Customizable medication reminders with sound and browser notifications</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-history"></i>
+              <h4>Comprehensive History</h4>
+              <p>Track your medication adherence and view detailed history logs</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-chart-line"></i>
+              <h4>Health Analytics</h4>
+              <p>Monitor your compliance rates and adherence patterns</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-shield-alt"></i>
+              <h4>Privacy Focused</h4>
+              <p>All data stored locally in your browser - your information stays with you</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-section">
+          <h3><i class="fas fa-globe"></i> SDG 3: Good Health & Well-Being</h3>
+          <div class="sdg-content">
+            <div class="sdg-image">
+              <div class="sdg-logo">SDG 3</div>
+            </div>
+            <div class="sdg-text">
+              <p><strong>Target 3.8:</strong> Achieve universal health coverage, including access to quality essential health-care services and access to safe, effective, quality and affordable essential medicines and vaccines for all.</p>
+              <p>PillTime Pro contributes to this goal by:</p>
+              <ul>
+                <li>Improving medication adherence through reliable reminders</li>
+                <li>Providing accessible medication management tools</li>
+                <li>Supporting better health outcomes through consistent tracking</li>
+                <li>Empowering individuals to take control of their health</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-section">
+          <h3><i class="fas fa-lock"></i> Privacy & Security</h3>
+          <p>PillTime Pro operates entirely in your browser. All your medication data, reminders, and history are stored locally on your device using localStorage.</p>
+          <p><strong>No data is sent to any servers.</strong> Your health information remains private and secure on your own device.</p>
+        </div>
+        
+        <div class="about-section">
+          <h3><i class="fas fa-mobile-alt"></i> How to Use</h3>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-number">1</div>
+              <h4>Add Medications</h4>
+              <p>Use the Add Reminder page to input your medication details and schedule</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">2</div>
+              <h4>Receive Reminders</h4>
+              <p>Get timely alerts when it's time to take your medication</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">3</div>
+              <h4>Track Adherence</h4>
+              <p>Mark medications as taken and review your history</p>
+            </div>
+            <div class="step-card">
+              <div class="step-number">4</div>
+              <h4>Export Data</h4>
+              <p>Share your medication history with healthcare providers if needed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <div class="footer-logo">
+          <i class="fas fa-capsules"></i>
+          <h3>PillTime Pro</h3>
+        </div>
+        <p>Professional medication management for better health outcomes</p>
+        <div class="sdg-badge">
+          <i class="fas fa-heart"></i>
+          <span>Supporting SDG 3: Good Health & Well-Being</span>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <a href="index.html">Dashboard</a>
+        <a href="add.html">Add Medication</a>
+        <a href="history.html">History Log</a>
+        <a href="about.html">About SDG</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Health Impact</h4>
+        <p>Proper medication adherence can reduce hospitalizations by 50% and improve health outcomes significantly.</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <small>&copy; 2024 PillTime Pro. All data remains in your browser.</small>
+    </div>
+  </footer>
+
+  <style>
+    /* About Page Specific Styles */
+    .about-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .about-section {
+      background: var(--surface-color);
+      border-radius: 12px;
+      padding: 30px;
+      border: 1px solid var(--border-color);
+    }
+
+    .about-section h3 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+
+    .about-section p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      color: var(--text-secondary);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .feature-card {
+      background: var(--background-color);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .feature-card i {
+      font-size: 36px;
+      color: var(--primary-color);
+      margin-bottom: 16px;
+    }
+
+    .feature-card h4 {
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .sdg-content {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 30px;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .sdg-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .sdg-image {
+      display: flex;
+      justify-content: center;
+    }
+
+    .sdg-logo {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, #4CAF50, #2E7D32);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    }
+
+    .sdg-text ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .sdg-text li {
+      margin-bottom: 8px;
+      color: var(--text-secondary);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .step-card {
+      background: var(--background-color);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      width: 40px;
+      height: 40px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      box-shadow: 0 4px 8px var(--shadow-color);
+    }
+
+    .step-card h4 {
+      margin-bottom: 12px;
+      font-size: 18px;
+      color: var(--primary-color);
+    }
+  </style>
+
+  <script>
+    // About page JavaScript
+    document.addEventListener('DOMContentLoaded', function() {
+      // Theme toggle
+      const themeSwitch = document.getElementById('theme-switch');
+      if (themeSwitch) {
+        const savedTheme = localStorage.getItem('pilltime-theme') || 'light';
+        document.body.setAttribute('data-theme', savedTheme);
+        
+        const icon = themeSwitch.querySelector('i');
+        const text = themeSwitch.querySelector('span');
+        
+        if (savedTheme === 'dark') {
+          icon.className = 'fas fa-sun';
+          text.textContent = 'Light Mode';
+        }
+
+        themeSwitch.addEventListener('click', () => {
+          const currentTheme = document.body.getAttribute('data-theme');
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+          
+          document.body.setAttribute('data-theme', newTheme);
+          localStorage.setItem('pilltime-theme', newTheme);
+          
+          if (newTheme === 'dark') {
+            icon.className = 'fas fa-sun';
+            text.textContent = 'Light Mode';
+          } else {
+            icon.className = 'fas fa-moon';
+            text.textContent = 'Dark Mode';
+          }
+        });
+      }
+
+      // Update notification count
+      const reminders = JSON.parse(localStorage.getItem('pilltime-reminders') || '[]');
+      const notificationCount = document.getElementById('notification-count');
+      if (notificationCount) {
+        notificationCount.textContent = reminders.length;
+      }
+    });
+  </script>
+</body>
+</html>
